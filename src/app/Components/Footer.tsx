@@ -128,7 +128,7 @@ function Footer() {
                         </div>
                     </div>
                     <div className="mt-b p-1">
-                        <LinkButton href="/Contact" className="w-full text-center rounded-tl rounded-tr rounded-b rounded-br-2xl font-bold px-5 py-3 text-white hover:text-yellow-400 bg-red-500 hover:bg-red-400 transition duration-300 ease-in-out">
+                        <LinkButton href="/contact" className="w-full text-center rounded-tl rounded-tr rounded-b rounded-br-2xl font-bold px-5 py-3 text-white hover:text-yellow-400 bg-red-500 hover:bg-red-400 transition duration-300 ease-in-out">
                             Send Enquiry
                         </LinkButton>
                     </div>
