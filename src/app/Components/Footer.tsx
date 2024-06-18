@@ -69,9 +69,9 @@ function Footer() {
         <footer className="bg-gray-900 text-white py-5">
             <div className="max_width mt-10">
                 <div className="lg:grid lg:grid-cols-4 md:grid md:grid-cols-2">
-                    <div className="mb-5">
+                    <div className="mb-5 md:w-[130px] md:h-[130px] w-[100px] h-[100px]">
                         <div>
-                            <Image src="/logo2.png" alt="alt" width={130} height={130} className=""/>
+                            <Image src="/logo2.png" alt="logo" width={130} height={130}/>
                         </div>
                         <div>
                             <div className="footer_social_links">

@@ -1,14 +1,15 @@
 import React from 'react'
-import { AboutCommon } from '../Components'
+import { AboutCommon, Banner } from '../Components'
 import MissionSection from './MissionSection'
 import Journey from './Journey'
 
 function page() {
   return (
     <main>
-        <AboutCommon showButton={false}/>
-        <MissionSection/>
-        <Journey/>
+      <Banner imgUrel='/about-us.webp' title='About Us' />
+      <AboutCommon showButton={false} />
+      <MissionSection />
+      <Journey />
     </main>
   )
 }

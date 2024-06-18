@@ -61,7 +61,7 @@ function WhyChooseUs() {
                             <div className="flex items-center gap-1" key={item.id}>
                                 <div>
                                     <div className="w-14 h-14 flex justify-center items-center bg-yellow-700 shadow-lg shadow-yellow-500/50">
-                                    <div>
+                                    <div className="w-9 h-9">
                                         <Image
                                             src={item.src}
                                             alt={item.alt}

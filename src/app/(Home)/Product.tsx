@@ -12,6 +12,7 @@ import 'swiper/css/navigation';
 // import required modules
 import { Navigation, Autoplay } from 'swiper/modules';
 import { Card } from '../Components';
+import LinkButton from '../Components/Linkbutton';
 
 function Product() {
   return (
@@ -20,7 +21,7 @@ function Product() {
         <h2 className='text-4xl font-bold text-yellow-500 mb-4 text-center'>Products</h2>
         <br />
         <div className='product_container'>
-          {/* <Swiper
+          <Swiper
             navigation={true}
             modules={[Navigation, Autoplay]}
             spaceBetween={10}
@@ -30,19 +31,32 @@ function Product() {
             autoplay={{
               delay: 4000,
             }}
+            breakpoints={{
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              768: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+              },
+              1024: {
+                slidesPerView: 4,
+                spaceBetween: 50,
+              }
+            }}
             className="mySwiper"
           >
-
-          </Swiper> */}
-          <div className='product_card grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-4'>
-            {cardData.map((item) => {
-              return (
-                <div className='card' key={item.id}>
-                  <Card image={item.image} name={item.name}title={item.name}/>
-                </div>
-
-              )
-            })}
+            {cardData.filter((item) => item.showTOAllProduct === true).map((item) => (
+              <SwiperSlide key={item.id}>
+                <Card image={item.image} name={item.name} title={item.name} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <div className='py-6 text-center w-full'>
+            <LinkButton className='px-4 py-2 border text-yellow-400 capitalize active:scale-90  bg-red-500 hover:text-yellow-500 hover:bg-red-600 font-bold rounded-md' href='/products'>
+              View all products
+            </LinkButton>
           </div>
         </div>
       </div>

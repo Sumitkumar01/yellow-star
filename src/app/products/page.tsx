@@ -1,4 +1,4 @@
-import { ProductBanner } from "../Components";
+import { Banner } from "../Components";
 import ProductList from "./ProductList";
 
 
@@ -7,7 +7,7 @@ function page() {
 
   return (
     <main>
-      <ProductBanner />
+      <Banner imgUrel="/products.webp" title="Products" />
       <ProductList/>
     </main>
   );

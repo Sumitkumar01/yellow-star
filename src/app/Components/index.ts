@@ -5,6 +5,6 @@ import Whatsapp from './Whatsapp';
 import Card from './Card';
 import BackToTop from './BackToTop';
 import AboutCommon from './AboutCommon';
-import ProductBanner from './banner/ProductBanner';
+import Banner from './banner/Banner';
 
-export {Navbar,Footer, HomeBanner, Whatsapp, Card, BackToTop, AboutCommon,ProductBanner}
+export {Navbar,Footer, HomeBanner, Whatsapp, Card, BackToTop, AboutCommon,Banner}

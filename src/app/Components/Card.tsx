@@ -12,15 +12,24 @@ function Card({
 }
 ) {
     return (
-        <div className="flex flex-col items-center justify-center w-full h-64 border-2 overflow-hidden border-gray-300 rounded-lg shadow-lg bg-white">
-            <div className="w-full h-[300px] over">
-                <Image src={image} alt={name} width={400} height={300} />
+        <div className="rounded-md overflow-hidden shadow-md border border-red-400 shadow-red-500/50">
+            <div className="w-full h-[200px] overflow-hidden">
+                <Image
+                    src={image}
+                    alt={name}
+                    width={200}
+                    height={200}
+                    priority
+                    layout="responsive"
+                />
             </div>
-            <div className="flex flex-col items-center justify-center w-full h-full p-2">
-                <h3 className="text-base capitalize font-bold text-yellow-500">{title}</h3>
+            <div className="p-3 h-16">
+                <h3 className="capitalize text-base font-medium text-center">{title}</h3>
             </div>
         </div>
     )
 }
 
 export default Card
+
+// 

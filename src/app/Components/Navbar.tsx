@@ -65,7 +65,7 @@ function Navbar() {
   return (
     <div className="max_width">
       <nav className="flex items-center lg:justify-start justify-between py-2">
-        <button className="lg:hidden block" onClick={handleClick}>
+        <button className="lg:hidden block p-3" onClick={handleClick}>
           <AiOutlineMenuUnfold className="text-[1.54rem] font-bold" />
         </button>
         <div className="p-1 lg:w-auto md:h-auto w-16 h-16">
