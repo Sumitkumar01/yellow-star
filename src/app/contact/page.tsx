@@ -38,7 +38,7 @@ function contact() {
     <section>
       <div className="max-w-[1900px] mx-auto bg-cover bg-center bg-no-repeat h-[40vh]" style={{ backgroundImage: "url('/contact.jpg')" }}>
         <div className="w-full h-full bg-black/50 flex items-center justify-center">
-          <h1 className="text-4xl uppercase font-semibold">Contact Us</h1>
+          <h1 className="text-4xl uppercase font-semibold text-white">Contact Us</h1>
         </div>
       </div>
       <div className="py-5">
