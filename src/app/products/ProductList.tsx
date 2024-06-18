@@ -80,7 +80,7 @@ function ProductList() {
                         </div>
                         <div className="p-2 lg:grid lg:grid-cols-3 md:grid md:grid-cols-2 gap-2">
                             {data.map((card) => (
-                                <div className="" key={card.id}>
+                                <div className="mb-5" key={card.id}>
                                     <Card name={card.name} title={card.name} image={card.image} />
                                 </div>
                             ))}
