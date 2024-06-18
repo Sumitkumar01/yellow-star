@@ -69,24 +69,23 @@ function Footer() {
         <footer className="bg-gray-900 text-white py-5">
             <div className="max_width mt-10">
                 <div className="lg:grid lg:grid-cols-4 md:grid md:grid-cols-2">
-                    <div className="mb-5 md:w-[130px] md:h-[130px] w-[100px] h-[100px]">
-                        <div>
-                            <Image src="/logo2.png" alt="logo" width={130} height={130}/>
+                    <div className="mb-5">
+                        <div className="mb-5 md:w-[130px] md:h-[130px] w-[100px] h-[100px]">
+                            <Image src="/logo2.png" alt="logo" width={130} height={130} />
                         </div>
-                        <div>
-                            <div className="footer_social_links">
-                                <ul className="flex items-center justify-start gap-4 mt-5">
-                                    {social_links.map((link, index) => {
-                                        return (
-                                            <li key={index}>
-                                                <Link href={link.src} className="flex items-center justify-center text-xl border-red-500 w-9 h-9 border gap-2 hover:text-yellow-500 hover:bg-red-500 rounded-full transition duration-300 ease-in-out">
-                                                    {link.linkname}
-                                                </Link>
-                                            </li>
-                                        );
-                                    })}
-                                </ul>
-                            </div>
+                        <div className="footer_social_links">
+                            <ul className="flex items-center justify-start gap-4 mt-5">
+                                {social_links.map((link, index) => {
+                                    return (
+                                        <li key={index}>
+                                            <Link href={link.src} className="flex items-center justify-center text-xl border-red-500 w-9 h-9 border gap-2 hover:text-yellow-500 hover:bg-red-500 rounded-full transition duration-300 ease-in-out">
+                                                {link.linkname}
+                                                <span className="sr-only">social-link</span>
+                                            </Link>
+                                        </li>
+                                    );
+                                })}
+                            </ul>
                         </div>
                     </div>
                     <div className="mb-5">
@@ -117,7 +116,7 @@ function Footer() {
                                         return (
                                             <li key={index} className="w-full py-2">
                                                 <Link href={link.src} className="flex items-center gap-2 hover:text-yellow-400 transition duration-300 ease-in-out">
-                                                    {link.linkname}
+                                                    {link.linkname} <span className="sr-only">contact-link</span>
                                                     <span>{link.title}</span>
                                                 </Link>
                                             </li>
@@ -127,8 +126,8 @@ function Footer() {
                             </div>
                         </div>
                     </div>
-                    <div className="mt-b p-1">
-                        <LinkButton href="/contact" className="w-full text-center rounded-tl rounded-tr rounded-b rounded-br-2xl font-bold px-5 py-3 text-white hover:text-yellow-400 bg-red-500 hover:bg-red-400 transition duration-300 ease-in-out">
+                    <div className="lg:mt-10 p-1">
+                        <LinkButton href="/contact" className="w-full text-center rounded-tl rounded-tr rounded-b rounded-br-2xl font-bold px-5 py-3 text-white hover:text-yellow-400 bg-red-500 hover:bg-red-600 transition duration-300 ease-in-out">
                             Send Enquiry
                         </LinkButton>
                     </div>

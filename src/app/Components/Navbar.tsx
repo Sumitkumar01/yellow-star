@@ -65,8 +65,9 @@ function Navbar() {
   return (
     <div className="max_width">
       <nav className="flex items-center lg:justify-start justify-between py-2">
-        <button className="lg:hidden block p-3" onClick={handleClick}>
+        <button className="lg:hidden block py-3 pr-2" onClick={handleClick}>
           <AiOutlineMenuUnfold className="text-[1.54rem] font-bold" />
+          <span className="sr-only">menu</span>
         </button>
         <div className="p-1 lg:w-auto md:h-auto w-16 h-16">
           <Link href="/">
@@ -81,6 +82,7 @@ function Navbar() {
                   href={item.src}
                   className="text-[1.54rem] font-bold border-red-700 border flex items-center justify-center w-9 h-9 hover:text-yellow-400 hover:bg-red-500 duration-300"
                 >
+                  <span className="sr-only">social link</span>
                   {item.linkname}
                 </Link>
               </li>
@@ -101,12 +103,14 @@ function Navbar() {
         </div>
         <Link href={"tel:+919038262752"} className="lg:hidden block text-2xl font-bold">
           <IoCall />
+          <span className="sr-only">call</span>
         </Link>
       </nav>
       {/* mobile nave */}
       <div className={`duration-300 ease-in-out fixed top-0 w-full h-full bg-blue-50 z-20 ${show ? "left-0" : "left-[-100%]"}`}>
         <button className="p-3 mt-3 ml-1" onClick={handleClick}>
           <AiOutlineClose className="text-[1.54rem] font-bold"  />
+          <span className="sr-only">close button</span>
         </button>
         <nav>
           <ul className="flex flex-col items-start w-full gap-2 pl-1">

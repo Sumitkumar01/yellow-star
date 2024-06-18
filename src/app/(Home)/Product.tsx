@@ -16,8 +16,8 @@ import LinkButton from '../Components/Linkbutton';
 
 function Product() {
   return (
-    <section>
-      <div className='max_width'>
+    <section className='bg-slate-50 py-5'>
+      <div className='max_width '>
         <h2 className='text-4xl font-bold text-yellow-500 mb-4 text-center'>Products</h2>
         <br />
         <div className='product_container'>
@@ -54,7 +54,7 @@ function Product() {
             ))}
           </Swiper>
           <div className='py-6 text-center w-full'>
-            <LinkButton className='px-4 py-2 border text-yellow-400 capitalize active:scale-90  bg-red-500 hover:text-yellow-500 hover:bg-red-600 font-bold rounded-md' href='/products'>
+            <LinkButton className='px-4 py-2 border text-white capitalize active:scale-90  bg-red-500 hover:text-yellow-500 hover:bg-red-600 font-bold rounded-md' href='/products'>
               View all products
             </LinkButton>
           </div>

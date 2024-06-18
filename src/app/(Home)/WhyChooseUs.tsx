@@ -48,7 +48,7 @@ function WhyChooseUs() {
         },
     ];
     return (
-        <section className="py-5">
+        <section className="py-5 bg-slate-50">
             <div className="max_width">
                 <div>
                     <h2 className="text-4xl font-bold text-yellow-500 mb-4 text-center">

@@ -29,6 +29,7 @@ function BackToTop() {
         <div className={`fixed bottom-28 z-50  ease-in-out duration-300 ${show ? 'right-5' : '-right-24'}`}>
             <button onClick={handleClick} className='bg-red-500 animate-bounce text-black font-bold text-xl p-5 rounded-full shadow-lg'>
                 <AiOutlineArrowUp className='text-2xl font-bold'/>
+                <span className='sr-only'>back to top button</span>
             </button>
         </div>
     )

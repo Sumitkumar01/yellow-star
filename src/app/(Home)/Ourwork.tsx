@@ -3,7 +3,7 @@ import React from 'react'
 
 function Ourwork() {
   return (
-    <section className='py-5'>
+    <section className='py-5 bg-slate-50'>
       <div className='max_width'>
       <div>
         <h2 className='text-center text-4xl font-bold text-yellow-500 mb-10'>Working Process</h2>
