@@ -19,7 +19,7 @@ function Card({
                     alt={name}
                     width={200}
                     height={200}
-                    priority
+                    // priority
                     layout="responsive"
                 />
             </div>

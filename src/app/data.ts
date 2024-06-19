@@ -1,4 +1,4 @@
-interface card {
+export interface cardDataType {
     id: number;
     name: string;
     showTOAllProduct?: boolean;
@@ -6,7 +6,7 @@ interface card {
     category: string;
 }
 
-export const cardData: card[] = [
+export const cardData: cardDataType[] = [
     {
         id: 1,
         name: "two shelves chaat display counter",
