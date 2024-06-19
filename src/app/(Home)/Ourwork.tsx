@@ -3,10 +3,10 @@ import React from 'react'
 
 function Ourwork() {
   return (
-    <section className='py-5 bg-slate-50'>
+    <section className='py-5 bg-slate-200'>
       <div className='max_width'>
       <div>
-        <h2 className='text-center text-4xl font-bold text-yellow-500 mb-10'>Working Process</h2>
+        <h2 className='text-center text-4xl font-bold text-red-500 mb-10'>Working Process</h2>
       </div>
       <div>
         <Image src="/images/chart.png" alt="alt" width={1300} height={500} />

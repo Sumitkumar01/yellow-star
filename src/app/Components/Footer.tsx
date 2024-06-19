@@ -78,7 +78,7 @@ function Footer() {
                                 {social_links.map((link, index) => {
                                     return (
                                         <li key={index}>
-                                            <Link href={link.src} className="flex items-center justify-center text-xl border-red-500 w-9 h-9 border gap-2 hover:text-yellow-500 hover:bg-red-500 rounded-full transition duration-300 ease-in-out">
+                                            <Link href={link.src} className="flex items-center justify-center text-xl border-red-500 w-9 h-9 border gap-2 hover:text-yellow-400 hover:bg-red-500 rounded-full transition duration-300 ease-in-out">
                                                 {link.linkname}
                                                 <span className="sr-only">social-link</span>
                                             </Link>
@@ -127,7 +127,7 @@ function Footer() {
                         </div>
                     </div>
                     <div className="lg:mt-10 p-1">
-                        <LinkButton href="/contact" className="w-full text-center rounded-tl rounded-tr rounded-b rounded-br-2xl font-bold px-5 py-3 text-white hover:text-yellow-400 bg-red-500 hover:bg-red-600 transition duration-300 ease-in-out">
+                        <LinkButton href="/contact" className="w-full text-center rounded-tl rounded-tr rounded-b rounded-br-2xl font-bold px-5 py-3 text-white hover:text-red-500 bg-red-500 hover:bg-red-50 border border-red-600 transition duration-300 ease-in-out">
                             Send Enquiry
                         </LinkButton>
                     </div>

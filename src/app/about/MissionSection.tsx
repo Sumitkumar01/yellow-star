@@ -28,7 +28,7 @@ function MissionSection() {
     }
     ]
     return (
-        <section className="py-7">
+        <section className="py-7 bg-slate-200">
             <div className="md:grid grid-cols-2 gap-7 max_width">
                 {data.map((item) => (
                     <div key={item.id} className="flex flex-col items-center justify-center gap-3 border border-yellow-400 shadow-md shadow-yellow-400/50 p-7 mb-5">
@@ -36,7 +36,7 @@ function MissionSection() {
                             <Image src={item.url} alt={item.alt} width={50} height={50} />
                         </div>
                         <div className="flex flex-col items-center justify-center gap-3">
-                            <h2 className="md:text-3xl text-xl font-bold text-center">{item.title}</h2>
+                            <h2 className="md:text-3xl text-xl text-red-500 font-bold text-center">{item.title}</h2>
                             <p className="text-center text-sm">{item.description}</p>
                         </div>
                     </div>

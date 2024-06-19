@@ -23,7 +23,7 @@ function Card({
                     layout="responsive"
                 />
             </div>
-            <div className="p-3 h-16">
+            <div className="p-3 h-16 bg-white">
                 <h3 className="capitalize text-base font-medium text-center">{title}</h3>
             </div>
         </div>

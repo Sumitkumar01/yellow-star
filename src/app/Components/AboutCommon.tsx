@@ -9,7 +9,7 @@ interface AboutCommonProps {
 
 const AboutCommon: React.FC<AboutCommonProps> = ({ showButton }) => {
     return (
-        <div className="py-7 bg-slate-50">
+        <div className="py-7 bg-slate-200">
             <div className="max_width">
                 <div className="md:grid md:grid-cols-2 gap-10">
                     <div className="md:col-span-1 flex justify-center items-center">
@@ -26,8 +26,8 @@ const AboutCommon: React.FC<AboutCommonProps> = ({ showButton }) => {
                         </div>
                     </div>
                     <div className="md:col-span-1 flex flex-col justify-center items-start">
-                        <h2 className="text-2xl font-bold mb-5 capitalize text-yellow-400">
-                            About <span className="text-red-600">Us</span>
+                        <h2 className="text-2xl font-bold mb-5 capitalize text-red-500">
+                            About Us
                         </h2>
                         <p className="text-gray-600 lg:text-base text-sm text-justify">
                             Yellow Star, with a seven-year history in the commercial kitchen
@@ -52,7 +52,7 @@ const AboutCommon: React.FC<AboutCommonProps> = ({ showButton }) => {
                         <br />
 
                         {showButton && (
-                            <LinkButton href="/about" className="text-center rounded-tl rounded-tr rounded-b rounded-br-2xl font-bold px-7 py-3 text-white hover:text-yellow-400 bg-red-500 hover:bg-red-400 transition duration-300 ease-in-out">
+                            <LinkButton href="/about" className="text-center rounded-tl rounded-tr rounded-b rounded-br-2xl font-bold px-7 py-3 text-white hover:text-red-500 border border-red-600 bg-red-500 hover:bg-red-50 transition duration-300 ease-in-out">
                                 Know More
                             </LinkButton>
                         )}

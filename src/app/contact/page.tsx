@@ -77,10 +77,10 @@ function contact() {
                 {contact_links.map((link, index) => (
                   <div key={index} className="flex gap-2 items-center">
                     <div>
-                      <Link href={link.src} className="text-xl mt-1 border-red-700 border flex items-center justify-center  rounded-full w-9 h-9 hover:text-yellow-400 hover:bg-red-500 duration-300">{link.linkname}</Link>
+                      <Link href={link.src} className="text-xl mt-1 border-red-700 border flex items-center justify-center  rounded-full w-9 h-9 hover:text-red-500 hover:bg-red-500 duration-300">{link.linkname}</Link>
                     </div>
                     <div>
-                      <Link href={link.src} className="text-xl font-normal hover:text-yellow-400 leading-6 text-justify">{link.title}</Link>
+                      <Link href={link.src} className="text-xl font-normal hover:text-red-500 leading-6 text-justify">{link.title}</Link>
                     </div>
                   </div>
                 ))}

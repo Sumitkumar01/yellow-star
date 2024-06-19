@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ReactElement, useState } from "react";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
 import { FaFacebook } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaTwitterSquare } from "react-icons/fa";
@@ -12,6 +13,8 @@ import { AiOutlineClose, AiOutlineMenuUnfold } from "react-icons/ai";
 import { IoCall } from "react-icons/io5";
 
 function Navbar() {
+
+  const pathName = usePathname();
 
   const [show, setShow] = useState(false);
 
@@ -62,6 +65,8 @@ function Navbar() {
     },
   ];
 
+  // const isActive = pathName === navlink[0].src;
+
   return (
     <div className="max_width">
       <nav className="flex items-center lg:justify-start justify-between py-2">
@@ -80,7 +85,7 @@ function Navbar() {
               <li key={i} className="py-4">
                 <Link
                   href={item.src}
-                  className="text-[1.54rem] font-bold border-red-700 border flex items-center justify-center w-9 h-9 hover:text-yellow-400 hover:bg-red-500 duration-300"
+                  className="text-[1.54rem] font-bold border-red-700 border flex items-center justify-center w-9 h-9 hover:text-red-500 hover:bg-red-500 duration-300"
                 >
                   <span className="sr-only">social link</span>
                   {item.linkname}
@@ -89,16 +94,29 @@ function Navbar() {
             ))}
           </ul>
           <ul className="flex items-center justify-end w-full gap-5">
-            {navlink.map((item, i) => (
+            {/* {navlink.map((item, i) => (
               <li key={i} className="py-4">
                 <Link
                   href={item.src}
-                  className="text-base font-bold hover:text-yellow-500 hover:border-red-600 hover:border-b-2  px-4 py-2 duration-300"
+                  className={`text-base font-bold  px-4 py-2 duration-300 ${isActive?"hover:text-red-500 hover:border-red-600 hover:border-b-2":"border-b-2 border-r-red-600 text-red-500"}`}
                 >
                   {item.linkname}
                 </Link>
               </li>
-            ))}
+            ))} */}
+            {navlink.map((item, i) => {
+              const isActive = pathName === item.src;
+              return (
+                <li key={i} className="py-4">
+                  <Link
+                    href={item.src}
+                    className={`text-base font-bold  px-4 py-2 duration-300 ${isActive ? "border-b-2 border-red-600 text-yellow-500" : "hover:text-yellow-500 hover:border-red-600 hover:border-b-2"}`}
+                  >
+                    {item.linkname}
+                  </Link>
+                </li>
+              )
+            })}
           </ul>
         </div>
         <Link href={"tel:+919038262752"} className="lg:hidden block text-2xl font-bold">
@@ -109,21 +127,24 @@ function Navbar() {
       {/* mobile nave */}
       <div className={`duration-300 ease-in-out fixed top-0 w-full h-full bg-blue-50 z-20 ${show ? "left-0" : "left-[-100%]"}`}>
         <button className="p-3 mt-3 ml-1" onClick={handleClick}>
-          <AiOutlineClose className="text-[1.54rem] font-bold"  />
+          <AiOutlineClose className="text-[1.54rem] font-bold" />
           <span className="sr-only">close button</span>
         </button>
         <nav>
           <ul className="flex flex-col items-start w-full gap-2 pl-1">
-            {navlink.map((item, i) => (
-              <li key={i} className="py-4 w-full">
-                <Link onClick={handleClick}
-                  href={item.src}
-                  className="text-base block font-bold hover:text-yellow-500 hover:border-red-600 hover:border-b-2  px-4 py-2 duration-300"
-                >
-                  {item.linkname}
-                </Link>
-              </li>
-            ))}
+            {navlink.map((item, i) => {
+              const isActive = pathName === item.src;
+              return (
+                <li key={i} className="py-4 flex px-2 w-screen">
+                  <Link onClick={handleClick}
+                    href={item.src}
+                    className={`text-base font-bold px-4 w-screen py-2 duration-300 ${isActive ? "border-b-2 border-red-600 text-yellow-500" : "hover:text-yellow-500 hover:border-red-600 hover:border-b-2"}`}
+                  >
+                    {item.linkname}
+                  </Link>
+                </li>
+              )
+            })}
           </ul>
         </nav>
       </div>
