@@ -68,7 +68,7 @@ function ProductList() {
                             <button
                                 onClick={() => {
                                     setShow(!show);
-                                    console.log(show);
+                                    
                                 }}
                                 className="px-5 py-1 capitalize hover:bg-yellow-300 hover:text-red-500 border mb-2 rounded-lg"
                             >
@@ -88,7 +88,11 @@ function ProductList() {
                                     </div>
                                     {/* product filter */}
                                     <button
-                                        onClick={() => filterdate(true)}
+                                        onClick={() => {
+                                            filterdate(true);
+                                            setShow(!show);
+                                            
+                                        }}
                                         className="w-full mb-2 hover:bg-yellow-300 hover:text-red-500 capitalize text-red-400 text-start py-2 px-4 border border-red-400 rounded-lg"
                                     >
                                         All Products
@@ -99,7 +103,7 @@ function ProductList() {
                                                 onClick={() => {
                                                     filterdate(item);
                                                     setShow(!show);
-                                                    console.log(show);
+                                                    
                                                 }}
                                                 className="w-full active:bg-yellow-300 active:text-red-500 hover:bg-yellow-300 hover:text-red-500 capitalize text-red-400 text-start py-2 px-4 border border-red-400 rounded-lg"
                                             >
